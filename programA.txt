@@ -1,0 +1,15 @@
+dcis N;
+N = cdcis();
+dcis max;
+max = 0;
+
+kym (N > 0) {
+	dcis next;
+	next = cdcis();
+	ak (next > max) tak {
+		max = next;
+	}
+	N = N - 1;
+}
+
+vypisdcis(max);

@@ -1,0 +1,58 @@
+dcis N;
+N = cdcis();
+
+dcis graf[N * N];
+dcis dlzky[N * N];
+dcis i;
+i = 0;
+dcis j;
+j = 0;
+kym(i != N) {
+	kym(j != N) {
+		dcis next;
+		next = cdcis();
+		graf[i*N + j] = next;
+		dlzky[i*N + j] = dlzky[i*N + j];
+
+		j = j + 1;
+	}
+	i = i + 1;
+	j = 0;
+}
+
+dcis k;
+k = 0;
+i = 0;
+kym(k != N) {
+	kym(i != N) {
+		kym(j != N) {
+			ak(((( dlzky[i*N + k] != -1) & (dlzky[k+N + j] != -1)) & (dlzky[i*N + j] != -1))) tak {
+				ak(((dlzky[i*N + k] + dlzky[k*N + j]) < dlzky[i*N + j])) tak {
+					dlzky[i*N + j] = dlzky[i*N + k] + dlzky[k*N + j];
+				}
+			}
+
+			j = j + 1;
+		}
+		i = i + 1;
+		j = 0;
+	}
+	k = k + 1;
+	i = 0;
+}
+ak (i != N) tak {
+	ak (j != N) tak {
+		dcis dlzka;
+		dlzka = dlzky[i*N + j];
+		vypisdcis(dlzka);
+		kcis par;
+		par = 32;
+		vypisZnak(par);
+		j = (j + 1);
+	}
+	kcis par;
+	par = 10;
+	vypisZnak(par);
+	i = i + 1;
+	j = 0;
+}

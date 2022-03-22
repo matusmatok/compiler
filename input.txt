@@ -1,0 +1,39 @@
+dcis fw;
+fw = 74;
+
+funkcia dcis prva(kcis c){    
+	kcis b[14];
+	dcis d;
+	dcis m;
+	m = 7;
+	dcis n;
+	n = 1814;
+	dcis v;
+	v = m + n;
+	d = m * n + 47*(-v)^8;
+	vypisdcis(d);
+	retaz r;
+	r = "ahoj";
+	vrat d;
+	d = d*5;
+};
+
+       
+funkcia dcis druha(dcis[] a, kcis b){
+	a[4] = a[10];
+	ak (a[7] > 4) tak {
+		kcis c;
+		c = 'b';
+	}
+	inak {
+		dcis m;
+		m = 155;
+		vrat m;
+	}
+	vrat 5165156;
+};
+
+
+dcis al;
+al = 5;
+
